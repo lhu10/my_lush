@@ -82,13 +82,50 @@ by Lucy Hu
   Locates the index of ; in args
   If there is no ; then the index would be -1
   =============================================*/
-  void redirect(char **args);
-  void my_cd(char **args);
-  void my_exit(char **args);
-  void my_pipe(char *line);
-  void execute(char **args);
-  void fork_exec(char **args, char *line);
-    
+  /*=============void redirect()=================
+  Inputs: char **args
+  Returns: N/A
+  
+  Does simple redirection with < and >
+  =============================================*/
+  
+  /*==============void my_cd()==================
+  Inputs: char **args 
+  Returns: N/A
+  
+  Executes cd command using chdir   
+  =============================================*/
+  
+  /*==============void my_exit()=================
+  Inputs: char **args
+  Returns: N/A
+  
+  Prints "Program exited" and frees args
+  Executes exit command
+  =============================================*/
+ 
+  /*==============void my_pipe()=================
+  Inputs: char *line
+  Returns: N/A
+  
+  Executes piping using popen
+  ==============================================*/
+  
+  /*==============void execute()=================
+  Inputs: char **args
+  Returns: N/A
+  
+  Calls redirect() to see if it needs to redirect
+  Executes commands using execvp
+  =============================================*/
+  
+  /*==============void fork_exec()===============
+  Inputs: char **args
+          char *line
+  Returns: N/A
+  
+  Forks and executes commands
+  =============================================*/
   ```
 ### lush.c
   * Runs the entire program with all the necessary functions
@@ -99,5 +136,6 @@ by Lucy Hu
   
   Reads commands one line at a time
   Executes commands with neccessary functions
+  Frees any allocated memory
   ========================================*/
   ```
