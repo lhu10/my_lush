@@ -57,8 +57,20 @@ by Lucy Hu
 ### lush_helper.c
   * Handles the executing of commands and helper functions for modularity
   ```
-  char **create_args(char **args, char *line, int beg, int end);
-  int *find_semi(char **args, char *line);
+  /*============char **create_args()=============
+  Inputs: char **args
+          char *line
+          int beg
+          int end
+  Returns: Array of strings in which each index is a command argument
+
+  Creates a temp array of strings that holds the commands separated by ;
+  =============================================*/
+  
+  /*=============int *find_semi(char **args, char *line)=============
+  Inputs: char **args
+          char *line
+  =============================================*/
   void redirect(char **args);
   void my_cd(char **args);
   void my_exit(char **args);
