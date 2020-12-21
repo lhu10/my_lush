@@ -54,8 +54,8 @@ by Lucy Hu
   Gets rid of the new line created by fgets
   ===========================================*/
   ```
-  ### lush_helper.c
-    * Handles the executing of commands and helper functions for modularity
+### lush_helper.c
+  * Handles the executing of commands and helper functions for modularity
     ```
     char **create_args(char **args, char *line, int beg, int end);
     int *find_semi(char **args, char *line);
