@@ -67,3 +67,11 @@ by Lucy Hu
     void fork_exec(char **args, char *line);
     
     ```
+### lush.c
+  * Runs the entire program with all the necessary functions
+  ```
+  /*=============int main()=================
+  Inputs: N/A
+  Returns: 0
+  ========================================*/
+  ```
