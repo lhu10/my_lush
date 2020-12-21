@@ -4,8 +4,8 @@ by Lucy Hu
 ### Features: 
 - Forks and executes commands
 - Parses multiple commands on one line with ; 
-- Simple redirction using > and <
-- Simple pipes
+- Simple redirection using > and <
+- Simple piping 
 
 ---
 
