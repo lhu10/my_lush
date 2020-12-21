@@ -10,6 +10,10 @@ by Lucy Hu
 ---
 
 ### Attempted: 
+- The following did not end up working, but have been left in the code, commented out:
+  - I'm not too sure if I did the piping properly but I have another attempt where I used popen to get 
+    the ouput of the first command to become the input of second command. However, the problem with 
+    that was that it didn't work if the first or second command had more than 1 argument.
 
 ---
 
