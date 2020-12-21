@@ -15,7 +15,7 @@ by Lucy Hu
 
 ### Bugs: 
 - cd, exit, and piping has to be on separate lines because some commands would repeat when any of those were placed in the fork (the fork is where the parsing multiple commands on one line is taken care of)
-- Placing two ;'s next to each results seg fault
+- Placing two ;'s next to each other results in seg fault
 - Redirecting > (stdout) doesn't work properly when the command before > has more than 1 argument. 
   For example:
   ```
@@ -27,7 +27,7 @@ by Lucy Hu
 ---
 
 ### Files & Function Headers: 
-#### parse.c
+### parse.c
   * Handles all line-related functions
   ```
   /*===========int count_tokens()==============
@@ -54,3 +54,16 @@ by Lucy Hu
   Gets rid of the new line created by fgets
   ===========================================*/
   ```
+  ### lush_helper.c
+    * Handles the executing of commands and helper functions for modularity
+    ```
+    char **create_args(char **args, char *line, int beg, int end);
+    int *find_semi(char **args, char *line);
+    void redirect(char **args);
+    void my_cd(char **args);
+    void my_exit(char **args);
+    void my_pipe(char *line);
+    void execute(char **args);
+    void fork_exec(char **args, char *line);
+    
+    ```
