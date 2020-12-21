@@ -14,9 +14,13 @@ by Lucy Hu
 ---
 
 ### Bugs: 
-- cd, exit, and piping has to be on separate lines because some commands would repeat when any of those were placed in the fork (the fork is where the parsing multiple commands on one line is taken care of)
+- cd, exit, and piping has to be on separate lines because some commands would repeat when any of 
+  those were placed in the fork (the fork is where the parsing multiple commands on one line is taken 
+  care of)
 - Placing two ;'s next to each other results in seg fault
-- Redirecting > (stdout) doesn't work properly when the command before > has more than 1 argument. 
+- Redirecting > (stdout) doesn't work properly when the command before > has more than 1 argument. But 
+  redirecting < (stdin) works. I tried setting args[i] = NULL like I did for redirecting stdin but it 
+  doesn't work and I don't know why.
   For example:
   ```
   $ echo hello > hi
