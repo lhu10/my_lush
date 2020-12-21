@@ -6,7 +6,7 @@
 #include "parse.h"
 #include "lush_helper.h"
 
-int main(int argc, char **argv){
+int main(){
 
     char buff[256];
     //reads one line at a time
