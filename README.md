@@ -65,11 +65,18 @@ by Lucy Hu
   Returns: Array of strings in which each index is a command argument
 
   Creates a temp array of strings that holds the commands separated by ;
+  beg and end are the first and last (respectively) indices of args which determines range/size of the temp array
+  end is dependent on find_semi() function
+  If there is no ; (end is equal to -1) then end is set as the total number of tokens in args
   =============================================*/
   
-  /*=============int *find_semi(char **args, char *line)=============
+  /*=============int *find_semi()===============
   Inputs: char **args
           char *line
+  Returns: Int array in which each index is the index of where ; is in args
+  
+  Locates the index of ; in args
+  If there is no ; then the index would be -1
   =============================================*/
   void redirect(char **args);
   void my_cd(char **args);
