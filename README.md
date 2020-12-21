@@ -82,7 +82,8 @@ by Lucy Hu
   Locates the index of ; in args
   If there is no ; then the index would be -1
   =============================================*/
-  /*=============void redirect()=================
+  
+  /*=============void redirect()================
   Inputs: char **args
   Returns: N/A
   
@@ -96,7 +97,7 @@ by Lucy Hu
   Executes cd command using chdir   
   =============================================*/
   
-  /*==============void my_exit()=================
+  /*==============void my_exit()================
   Inputs: char **args
   Returns: N/A
   
@@ -104,14 +105,14 @@ by Lucy Hu
   Executes exit command
   =============================================*/
  
-  /*==============void my_pipe()=================
+  /*==============void my_pipe()================
   Inputs: char *line
   Returns: N/A
   
   Executes piping using popen
-  ==============================================*/
+  =============================================*/
   
-  /*==============void execute()=================
+  /*==============void execute()================
   Inputs: char **args
   Returns: N/A
   
@@ -119,7 +120,7 @@ by Lucy Hu
   Executes commands using execvp
   =============================================*/
   
-  /*==============void fork_exec()===============
+  /*==============void fork_exec()==============
   Inputs: char **args
           char *line
   Returns: N/A
@@ -130,12 +131,12 @@ by Lucy Hu
 ### lush.c
   * Runs the entire program with all the necessary functions
   ```
-  /*=============int main()=================
+  /*=============int main()==================
   Inputs: N/A
   Returns: 0
   
   Reads commands one line at a time
   Executes commands with neccessary functions
   Frees any allocated memory
-  ========================================*/
+  =========================================*/
   ```
