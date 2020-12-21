@@ -51,12 +51,18 @@ void redirect(char **args){
         int fd;
         if(strcmp(args[i], ">") == 0){
             fd = open(args[i+1], O_WRONLY | O_CREAT | O_TRUNC, 0644);
+            if(fd == -1){
+                printf("Error %d: %s", errno, strerror(errno));
+            }
             //redirecting stdout to fd
             dup2(fd, STDOUT_FILENO);
             close(fd); 
         }
         if(strcmp(args[i], "<") == 0){
             fd = open(args[i+1], O_RDONLY);
+            if(fd == -1){
+                printf("Error %d: %s", errno, strerror(errno));
+            }
             //redirecting stdin to fd
             dup2(fd, STDIN_FILENO);
             args[i] = NULL;
@@ -85,6 +91,9 @@ void my_exit(char **args){
 void my_pipe(char *line){
     FILE *fp; 
     fp = popen(line, "w"); 
+    if(fp == NULL){
+        perror("popen failed");
+    }
     pclose(fp);
     printf("\n");
 }
