@@ -15,7 +15,13 @@ by Lucy Hu
 
 ### Bugs: 
 - cd, exit, and piping has to be on separate lines because some commands would repeat when any of those were placed in the fork (the fork is where the parsing multiple commands on one line is taken care of)
-- Placing two ;'s next to each leads to seg fault
+- Placing two ;'s next to each results seg fault
+- Redirecting > (stdout) doesn't work properly when command before > has more than 1 argument
+ ex: ```
+     $ echo hello > hi.txt
+     $ cat hi.txt
+     hello > hi.txt
+     ```
 
 ---
 
