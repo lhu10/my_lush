@@ -73,5 +73,8 @@ by Lucy Hu
   /*=============int main()=================
   Inputs: N/A
   Returns: 0
+  
+  Reads commands one line at a time
+  Executes commands with neccessary functions
   ========================================*/
   ```
