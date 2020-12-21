@@ -89,6 +89,26 @@ void my_pipe(char *line){
     printf("\n");
 }
 
+/*void my_pipe(char **args){
+    FILE *input, *output; 
+    int i = 0;
+    while(args[i] != NULL){
+        if(strcmp(args[i], "|") == 0){
+            //output of ls becomes input for wc
+            input = popen(args[i-1], "r");
+            output = popen(args[i+1], "w");
+            char in[256];
+            while(fgets(in, sizeof(in), input) != NULL){
+                fprintf(output, "%s", in);
+            }
+        }
+        i++; 
+    }
+    pclose(input);
+    pclose(output);
+    printf("\n");
+}*/
+
 void execute(char **args){
     redirect(args);
     execvp(args[0], args);
